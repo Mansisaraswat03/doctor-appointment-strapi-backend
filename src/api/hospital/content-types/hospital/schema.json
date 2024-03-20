@@ -21,11 +21,11 @@
       "target": "api::category.category",
       "inversedBy": "hospitals"
     },
-    "appointment": {
+    "appointments": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::appointment.appointment",
-      "inversedBy": "hospitals"
+      "mappedBy": "hospital"
     }
   }
 }

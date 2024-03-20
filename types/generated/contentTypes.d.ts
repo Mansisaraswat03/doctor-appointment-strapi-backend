@@ -798,15 +798,15 @@ export interface ApiAppointmentAppointment extends Schema.CollectionType {
     UserName: Attribute.String & Attribute.Required;
     Date: Attribute.String;
     Time: Attribute.String;
-    hospitals: Attribute.Relation<
+    hospital: Attribute.Relation<
       'api::appointment.appointment',
-      'oneToMany',
+      'manyToOne',
       'api::hospital.hospital'
     >;
     Note: Attribute.Blocks;
-    doctors: Attribute.Relation<
+    doctor: Attribute.Relation<
       'api::appointment.appointment',
-      'oneToMany',
+      'manyToOne',
       'api::product.product'
     >;
     Email: Attribute.Email & Attribute.Required;
@@ -892,9 +892,9 @@ export interface ApiHospitalHospital extends Schema.CollectionType {
       'manyToOne',
       'api::category.category'
     >;
-    appointment: Attribute.Relation<
+    appointments: Attribute.Relation<
       'api::hospital.hospital',
-      'manyToOne',
+      'oneToMany',
       'api::appointment.appointment'
     >;
     createdAt: Attribute.DateTime;
@@ -952,9 +952,9 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'manyToOne',
       'api::category.category'
     >;
-    appointment: Attribute.Relation<
+    Name: Attribute.Relation<
       'api::product.product',
-      'manyToOne',
+      'oneToMany',
       'api::appointment.appointment'
     >;
     createdAt: Attribute.DateTime;

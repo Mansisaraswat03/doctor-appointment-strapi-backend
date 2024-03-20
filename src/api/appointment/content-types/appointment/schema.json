@@ -22,20 +22,20 @@
     "Time": {
       "type": "string"
     },
-    "hospitals": {
+    "hospital": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::hospital.hospital",
-      "mappedBy": "appointment"
+      "inversedBy": "appointments"
     },
     "Note": {
       "type": "blocks"
     },
-    "doctors": {
+    "doctor": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::product.product",
-      "mappedBy": "appointment"
+      "inversedBy": "Name"
     },
     "Email": {
       "type": "email",
