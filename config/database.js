@@ -10,6 +10,7 @@
           user: env('DATABASE_USERNAME', 'doctors_vgh4_user'),
           password: env('DATABASE_PASSWORD', 'cnLGuPw5eyOuV1wTTC3gTh3xgAQO18Iv'),
           schema: env('DATABASE_SCHEMA', 'public'), // Not required
+          ssl: env.bool('DATABASE_SSL', true),
         },
         debug: false,
         
