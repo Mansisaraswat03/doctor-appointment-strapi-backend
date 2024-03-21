@@ -4,11 +4,11 @@
       connection: {
         client: 'postgres',
         connection: {
-          host: env('DATABASE_HOST', 'localhost'),
+          host: env('DATABASE_HOST', 'dpg-cntubn0l6cac73c8a4f0-a.oregon-postgres.render.com'),
           port: env.int('DATABASE_PORT', 5432),
-          database: env('DATABASE_NAME', 'doctors'),
-          user: env('DATABASE_USERNAME', 'postgres'),
-          password: env('DATABASE_PASSWORD', '1234'),
+          database: env('DATABASE_NAME', 'doctors_vgh4'),
+          user: env('DATABASE_USERNAME', 'doctors_vgh4_user'),
+          password: env('DATABASE_PASSWORD', 'cnLGuPw5eyOuV1wTTC3gTh3xgAQO18Iv'),
           schema: env('DATABASE_SCHEMA', 'public'), // Not required
         },
         debug: false,
